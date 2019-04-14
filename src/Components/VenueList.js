@@ -19,8 +19,7 @@ class VenueList extends Component {
                         <p>User ratings: {singleResto.restaurant.user_rating.aggregate_rating}</p></div>
                     <h2>{singleResto.restaurant.name}</h2>
                     <section className="subDetails">
-                     <p>in {singleResto.restaurant.location.city}</p>
-                     <p>serving {singleResto.restaurant.cuisines}</p>
+                     <p>in {singleResto.restaurant.location.city} serving {singleResto.restaurant.cuisines}</p>
                     </section>
                     <div className="restaurantReviews">
                         <p>Restaurant goers say this spot is {singleResto.restaurant.user_rating.rating_text}</p>
