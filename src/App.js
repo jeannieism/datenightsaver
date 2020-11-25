@@ -15,7 +15,6 @@ class App extends Component {
   }
 
   onSelectedVenueChange = (hasClicked) => {
-    console.log(hasClicked);
     this.setState({
       hasClicked: hasClicked
     })
