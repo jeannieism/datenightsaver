@@ -2,6 +2,7 @@
   "name": "jeanniely-projecttwo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://jeannieism.github.io/datenightsaver",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^8.1",
@@ -9,17 +10,19 @@
     "@material-ui/core": "^3.9.3",
     "axios": "^0.18.0",
     "i": "^0.3.6",
-    "node-sass": "^4.11.0",
-    "npm": "^6.9.0",
+    "node-sass": "^4.13.1",
+    "npm": "^6.14.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
   },
-  "scripts": {
+ "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
