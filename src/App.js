@@ -1,7 +1,9 @@
+import { connect } from 'react-redux'
+import React, { Component } from 'react';
+
 import Form from './Components/Form.js'
 import Footer from './Components/Footer.js';
 import Header from './Components/Header.js';
-import React, { Component } from 'react';
 import VenueList from './Components/VenueList.js';
 import './App.css';
 
@@ -21,6 +23,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className="App">
         <Header
@@ -39,4 +42,11 @@ class App extends Component {
   }
 }
 
-export default App;
+
+export default connect(
+  state => {
+    return ({
+      venues: state.app
+    })
+  }
+)(App);
