@@ -68,14 +68,12 @@ class VenueList extends Component {
                     params: { 'q': ``, 'cuisines': ``, }
                 }
             )
-
             this.setState({
                 venues: venueData.data.restaurants
             });
         } catch (err) {
             console.log(err.message);
         }
-
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -92,6 +90,5 @@ class VenueList extends Component {
         );
     }
 }
-
 
 export default VenueList;

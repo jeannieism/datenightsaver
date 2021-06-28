@@ -1,9 +1,13 @@
-import Form from './Components/Form.js'
-import Footer from './Components/Footer.js';
-import Header from './Components/Header.js';
+import { connect } from 'react-redux'
 import React, { Component } from 'react';
-import VenueList from './Components/VenueList.js';
+
+import Form from './Components/Form'
+import Footer from './Components/Footer';
+import Header from './Components/Header';
+import VenueList from './Components/VenueList';
 import './App.css';
+
+import * as AppActions from './actions/app'
 
 class App extends Component {
   constructor() {
@@ -12,6 +16,12 @@ class App extends Component {
       venues: [],
       hasClicked: false
     }
+  }
+
+  componentDidMount() {
+    const { dispatch } = this.props
+
+    dispatch(AppActions.initData())
   }
 
   onSelectedVenueChange = (hasClicked) => {
@@ -39,4 +49,10 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(
+  state => {
+    return ({
+      venue: state
+    })
+  }
+)(App);
