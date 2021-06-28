@@ -4,7 +4,7 @@ const initialState = {
   venues: null
 }
 
-export default function appData(state = initialState, action) {
+export default function application(state = initialState, action) {
   switch (action.type) {
 
     case constants['INIT_VENUES']:
